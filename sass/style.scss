@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap);
+
+$cyan: hsla(179, 62%, 43%, 0.9);
+$cyan-light: hsla(178.7, 61.8%, 43.1%, 0.65);
+$brigth-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+html {
+  font-family: Karla;
+  font-size: 16px;
+  *,
+  *:before,
+  *:after {
+    font-weight: 400;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  background-color: $light-gray;
+  box-sizing: border-box;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .card {
+      display: grid;
+      min-width: 1000px;
+      max-height: 1440px;
+      grid-template-rows: 1fr 1.3fr;
+      .card__top {
+        padding: 2em 4em;
+        background-color: #fff;
+        border-radius: 10px 10px 0 0;
+        h1 {
+          color: $cyan;
+          font-weight: 700;
+          font-size: 2.3em;
+          margin: .7em 0;
+        }
+        h3 {
+          color: $brigth-yellow;
+          font-size: 1.5em;
+          font-weight: 400;
+          margin-bottom: 1.3rem;
+        }
+        p {
+          color: $grayish-blue;
+          font-weight: 400;
+          font-size: 1.3em;
+        }
+      }
+      .card__buttom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .title {
+          font-size: 1.4em;
+          color: #fff;
+          margin-bottom: 1em;
+        }
+        .card__buttom--subscription {
+          padding: 3em 4em;
+          background-color: $cyan;
+          border-radius: 0 0 0 10px;
+          .btn {
+            display: block;
+            background-color: $brigth-yellow;
+            color: #fff;
+            padding: .7em 5em;
+            font-size: 1.4em;
+            margin-top: 1em;
+            text-align: center;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px .5px hsla(249, 10%, 26%, 25%);
+            cursor: pointer;
+          }
+          .btn:hover {
+            background-color: #b6d431;
+          }
+          p {
+            font-size: 1.2em;
+            color: #fff;
+            padding: .6em 0em 1.3em;
+          }
+          .price {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            span {
+              font-size: .5em;
+              color: $light-gray;
+              padding-left: 1em;
+            }
+          }
+          
+        }
+        .card__buttom--whyus {
+          padding: 3em;
+          background-color: $cyan-light;
+          border-radius: 0 0 10px 0;
+          ul {
+            list-style: none;
+            color: #fff;
+            li {
+              padding-bottom: 0.4em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
