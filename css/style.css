@@ -18,7 +18,7 @@ html {
     min-height: 100vh; }
     html .container .card {
       display: grid;
-      min-width: 1000px;
+      max-width: 1000px;
       max-height: 1440px;
       grid-template-rows: 1fr 1.3fr; }
       html .container .card .card__top {
