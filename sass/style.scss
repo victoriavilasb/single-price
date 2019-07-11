@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap);
 
+$break-small: 770px;
 $cyan: hsla(179, 62%, 43%, 0.9);
 $cyan-light: hsla(178.7, 61.8%, 43.1%, 0.65);
 $brigth-yellow: hsl(71, 73%, 54%);
@@ -73,7 +74,7 @@ html {
             margin-top: 1em;
             text-align: center;
             border-radius: 6px;
-            box-shadow: 0px 0px 5px .5px hsla(249, 10%, 26%, 25%);
+            box-shadow: 0px 0px 1px 2.5px $cyan-light;
             cursor: pointer;
           }
           .btn:hover {
@@ -111,8 +112,45 @@ html {
           }
         }
       }
+      @media only screen and (max-width: $break-small) {
+        grid-template-rows: 1fr;
+        max-height: none;
+        min-width: unset;
+        .card__top {
+          padding: 2em 2em;
+          border-radius: unset;
+          h1 {
+            font-size: 1.5em;
+          }
+          h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+          }
+          p {
+            font-size: 1.1em;
+            line-height: 1.4em;
+          }
+        }
+        .card__buttom {
+          grid-template-rows: .5fr .5fr;
+          grid-template-columns: none;
+          .card__buttom--subscription {
+            padding: 2em 2em;
+            border-radius: unset;
+            .btn {
+              font-size: 1em;
+            }
+          }
+          .card__buttom--whyus {
+            padding: 2em;
+            border-radius: unset;
+          }
+        }
+      }
     }
   }
 }
+
+
 
 
